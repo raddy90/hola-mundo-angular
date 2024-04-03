@@ -5,19 +5,21 @@
       let character of characterList;
       let i = index;
       let isFirst = first;
-      let isLast = last
+      let isLast = last;
+      let isEven = even
     "
     class="list-group-item d-flex justify-content-between align-items-center"
     [ngClass]="{
-      'list-group-item-primary':isFirst,
-      'list-group-item-secondary':isLast
-      }"
+      'list-group-item-primary': isEven
+    }"
   >
     <span class="text-primary"> {{ i + 1 }}. </span>
     <strong> {{ character.name }} </strong> - Power:
     <strong> {{ character.power }} </strong>
     <!-- Es primero: {{ isFirst }}
     Es último: {{isLast}} -->
-    <button class="btn btn-danger" (click)="deleteCharacterById(character.id!)"> X </button>
+    <button class="btn btn-danger" (click)="deleteCharacterById(character.id!)">
+      X
+    </button>
   </li>
 </ul>
