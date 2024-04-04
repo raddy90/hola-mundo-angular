@@ -9,7 +9,7 @@ import { Character } from '../interfaces/character.interface';
 })
 export class MainPageComponent {
 
-  constructor( private dbzService: DbzService){}
+  constructor( private dbzService: DbzService ){}
 
     get characters(): Character[]{
       return [...this.dbzService.characters];
